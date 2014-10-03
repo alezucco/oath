@@ -102,12 +102,14 @@ describe('oath', function () {
   describe('chaining', function () {
     it('should allow you to chain promises using then', function (done) {
       var step1 = function (num) {
+        // console.log('step 1 func getting invoked');
         return promiseTimeout(function () {
           return num + 10;
         }, 5);
       };
 
       var step2 = function (num) {
+        // console.log('step 2 func getting invoked');
         return promiseTimeout(function () {
           return num + 20;
         }, 5);
